@@ -590,6 +590,37 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+form {
+  background: lightcoral;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+  max-width: 900px;
+  min-height: 510px;
+}
+form .form-header{
+  display: block;
+  width: 90%;
+}
+form .form-header h2 {
+  display: block;
+}
+form input {
+  display: block;
+  width: 90%;
+}
+form textarea {
+  display: block;
+  width: 90%;
+}
+form button {
+  width: 45%;
+  display: block;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
