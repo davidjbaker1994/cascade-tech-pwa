@@ -58,8 +58,8 @@ class ContactForm extends Component {
                 </div> 
                 <input type="text" maxlength="255" name="Name_First" fieldType="7" placeholder="First name" />
                 <input type="text" maxlength="255" name="Name_Last" fieldType="7" placeholder="Last name" />
-                <input type="text" compname="PhoneNumber" name="PhoneNumber_countrycode" maxlength="20" checktype="c7" value="" phoneFormat="1" isCountryCodeEnabled={true} fieldType="11" id="international_PhoneNumber_countrycode" valType="number" phoneFormatType="1" placeholder="Phone number"/>
-                <input fieldType="9"  type="text" maxlength="255" name="Email" value={this.state.Email} onChange={this.handleInputChange} checktype="c5" value="" placeholder="Email"/>
+                <input type="text" compname="PhoneNumber" name="PhoneNumber_countrycode" maxlength="20" checktype="c7" phoneFormat="1" isCountryCodeEnabled={true} fieldType="11" id="international_PhoneNumber_countrycode" valType="number" phoneFormatType="1" placeholder="Phone number"/>
+                <input fieldType="9"  type="text" maxlength="255" name="Email"  checktype="c5" placeholder="Email"/>
                 <textarea name="MultiLine" checktype="c1" maxlength="65535" 
                     placeholder="Please describe the nature of your request here"></textarea> 
                 <button class="zf-submitColor" >Submit</button>
