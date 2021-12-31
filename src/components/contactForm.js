@@ -7,13 +7,9 @@ class ContactForm extends Component {
           Email: "",
           MultiLine: "",
           PhoneNumber_countrycode: "",
-          SingleLine: "",
           SingleLine1: "",
-          SingleLine2: "",
-          ProblemClasses: []
         };
         this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleCustomSelectChange = this.handleCustomSelectChange.bind(this);
     }
 
     handleInputChange(event) {
@@ -22,28 +18,6 @@ class ContactForm extends Component {
         this.setState({
             [name]: target.value
         });
-    }
-
-    
-
-    handleCustomSelectChange(event) {
-        const selectedSize = event.target.value;
-        const indexOfSelected = this.state.SelectedSizes.indexOf(selectedSize);
-        const numPicked = this.state.SelectedSizes.length;
-        if (indexOfSelected == -1) {
-            this.setState(prevState => ({
-                SelectedSizes: prevState.SelectedSizes.concat(selectedSize)
-            }));
-        } else if (numPicked == 1) {
-                this.setState(() => ({
-                    SelectedSizes: []
-                }));
-        } else {
-            this.setState((prevState) => ({
-                SelectedSizes: prevState.SelectedSizes.filter(size => size !== selectedSize)
-            }));
-        }
-        console.log(this.state.SelectedSizes);
     }
     
     render() {
@@ -67,7 +41,7 @@ class ContactForm extends Component {
                         <option value="Class&#x20;3">Class 3</option>
                     </select>
                 </div>
-                <input type="text" name="SingleLine1" checktype="c1" value={this.state.SingleLine1} maxlength="255" fieldType="1" placeholder="Subject" />
+                <input type="text" name="SingleLine1" checktype="c1" value={this.state.SingleLine1} onChange={this.handleInputChange} maxlength="255" fieldType="1" placeholder="Subject" />
                 <textarea name="MultiLine" checktype="c1" maxlength="65535" 
                     placeholder="Please describe the nature of your request here"></textarea> 
                 <button class="zf-submitColor" >Submit</button>
