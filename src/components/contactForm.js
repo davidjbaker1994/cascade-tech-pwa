@@ -60,13 +60,14 @@ class ContactForm extends Component {
                             onChange={this.handleInputChange} maxlength="20" checktype="c7" phoneFormat="1" isCountryCodeEnabled="false" fieldType="11" id="international_PhoneNumber_countrycode" valType="number" phoneFormatType="1" placeholder="Phone number"/>
                 <input fieldType="9"  type="text" maxlength="255" name="Email" value={this.state.Email} onChange={this.handleInputChange}  checktype="c5" placeholder="Email"/>
                 <div className="custom-select-container">
-                    <select class="zf-form-sBox" name="Dropdown" multiple="multiple" checktype="c1" value={this.state.ProblemClasses} onClick={this.handleCustomSelectChange}>
-                        <option selected="true" value="-Select-">-Select-</option>
+                    <select class="zf-form-sBox" name="Dropdown" checktype="c1">
+                        <option selected="true" value="-Select-">Problem Class</option>
                         <option value="Class&#x20;1">Class 1</option>
                         <option value="Class&#x20;2">Class 2</option>
                         <option value="Class&#x20;3">Class 3</option>
                     </select>
                 </div>
+                <input type="text" name="SingleLine1" checktype="c1" value={this.state.SingleLine1} maxlength="255" fieldType="1" placeholder="Subject" />
                 <textarea name="MultiLine" checktype="c1" maxlength="65535" 
                     placeholder="Please describe the nature of your request here"></textarea> 
                 <button class="zf-submitColor" >Submit</button>
