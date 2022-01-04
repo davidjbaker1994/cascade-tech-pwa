@@ -23,7 +23,7 @@ const ContactForm = () => (
         <input type="text" name="SingleLine1" checktype="c1" maxlength="255" fieldType="1" placeholder="Subject" />
         <textarea name="MultiLine" checktype="c1" maxlength="65535" 
             placeholder="Please describe the nature of your request here"></textarea> 
-        <button class="zf-submitColor" >Submit</button>
+        <button className="zf-submitColor" >Submit</button>
     </form>
 )
       
