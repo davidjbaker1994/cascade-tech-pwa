@@ -6,7 +6,7 @@ const ContactForm = () => (
         enctype='multipart/form-data' id='form'>  
         <input type="text" maxlength="255" name="Name_First" fieldType="7" placeholder="First name" />
         <input type="text" maxlength="255" name="Name_Last" fieldType="7" placeholder="Last name" />
-        <input type="tel" compname="PhoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="PhoneNumber_countrycode" maxlength="20" checktype="c7" phoneFormat="1" isCountryCodeEnabled="true" fieldType="11" id="international_PhoneNumber_countrycode" valType="number" phoneFormatType="1" placeholder="Phone number"/>
+        <input type="tel" compname="PhoneNumber" name="PhoneNumber_countrycode" maxlength="20" checktype="c7" phoneFormat="1" isCountryCodeEnabled="true" fieldType="11" id="international_PhoneNumber_countrycode" valType="number" phoneFormatType="1" placeholder="Phone number"/>
         <input fieldType="9"  type="text" maxlength="255" name="Email"  checktype="c5" placeholder="Email"/>
         <div className="custom-select-container">
             <div>
